@@ -3,5 +3,10 @@
 public abstract class ConsolePage
 {
     public string petHeader = "***************************\n\tPet Console\n***************************";
-    public abstract void display();
+    public abstract ConsolePage display();
+
+    public void quitApp()
+    {
+        
+    }
 }

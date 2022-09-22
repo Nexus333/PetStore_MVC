@@ -5,25 +5,30 @@ using PetStore_MVC.View;
 public class PetStoreController
 {
   private ConsolePage currentPage;
-  private string userInput;
+  private bool runApp = true;
   
   public void setCurrentPage(ConsolePage newPage)
   {
     this.currentPage = newPage;
   }
-  
+
+  public void setupControllers()
+  {
+    //initialize all controllers for use. 
+  }
+
   public void start()
   {
     homePage hp = new homePage();
     setCurrentPage(hp);
-    hp.display();
-    getUserInput();
+    while (runApp)
+    {
+      currentPage = currentPage.display();
+    }
   }
 
-  public void getUserInput()
+  public void shutdown()
   {
-    Console.WriteLine("\nPlease enter a selection: > ");
-    this.userInput = Console.ReadLine();
+    this.runApp = false;
   }
-  
 }
