@@ -14,12 +14,11 @@ public class homePage : ConsolePage
                 Console.WriteLine(option);
                 optionNum += 1;
             }
-            Console.WriteLine("type quit to exit the application\n");
-            Console.Write("\nSelect an option > ");
+            standardPages();
+            promptForInput();
+            getUserInput();
 
-            string userSelection = Console.ReadLine();
-
-            switch (userSelection.ToLower())
+            switch (userInput.ToLower())
             {
                 case "1":
                     Console.Clear();
@@ -27,19 +26,19 @@ public class homePage : ConsolePage
                 case "2":
                     Console.Clear();
                     return new SearchPetsPage();
-                case "3":
-                    Console.Clear();
-                    return new PurchasePetPage();
                 case "quit":
-                    return this;
-                default:
-                    Console.WriteLine("Please Select a valid option!");
-                    Thread.Sleep(3000);
+                    onQuitApp();
+                    break;
+                case "h":
                     Console.Clear();
                     display();
+                    break;
+                default:
+                    invalidSelection();
                     break;
             }
 
             return this;
     }
+
 }
