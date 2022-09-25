@@ -31,7 +31,7 @@ public abstract class Animal
         this.name = newName;
     }
 
-    public void setPrice(int newPrice)
+    public void setPrice(double newPrice)
     {
         this.price = newPrice;
     }
