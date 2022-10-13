@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography;
-
-namespace PetStore_MVC.Model;
+﻿namespace PetStore_MVC.Data;
 
 public class AnimalRepository
 {
@@ -11,6 +9,11 @@ public class AnimalRepository
     {
         animalListByName = new Dictionary<string, Animal>();
         animalList= new List<Animal>();
+    }
+
+    public int getAnimalCount()
+    {
+        return animalList.Count;
     }
     
     
@@ -37,8 +40,15 @@ public class AnimalRepository
         animalListByName.Add(animalName, animalToAdd);
     }
 
+    public void onAnimalCreated(object animalRepo, DataEventArgs dataReceived)
+    {
+        AddAnimal(dataReceived._animalMade, dataReceived._animalType);
+    }
+
     public void updateAnimal()
     {
         ;
     }
+
+    
 }

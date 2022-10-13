@@ -1,12 +1,13 @@
-﻿namespace PetStore_MVC.Controller;
-using PetStore_MVC.Model;
-using PetStore_MVC.View;
+﻿using PetStore_MVC.Display;
+
+namespace PetStore_MVC.Controller;
 
 public class PetStoreController
 {
   private ConsolePage currentPage;
   private bool runApp = true;
   private CartController cartCtrl;
+  private AnimalController animalCtrl;
   
   public void setCurrentPage(ConsolePage newPage)
   {
@@ -17,6 +18,7 @@ public class PetStoreController
   {
     //initialize all controllers for use. 
     cartCtrl = new CartController();
+    animalCtrl = new AnimalController();
 
   }
 

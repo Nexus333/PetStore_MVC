@@ -1,4 +1,4 @@
-﻿namespace PetStore_MVC.View;
+﻿namespace PetStore_MVC.Display;
 
 public class AddAnimalPage : ConsolePage
 {

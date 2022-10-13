@@ -1,4 +1,4 @@
-﻿using PetStore_MVC.Model;
+﻿using PetStore_MVC.Data;
 
 namespace PetStore_MVC.Controller;
 

@@ -1,4 +1,4 @@
-﻿namespace PetStore_MVC.Model;
+﻿namespace PetStore_MVC.Data;
 
 public class Rodent : Animal
 {

@@ -1,4 +1,4 @@
-﻿namespace PetStore_MVC.Model;
+﻿namespace PetStore_MVC.Data;
 
 
 //{ string name, string age, string price, string breed, string breed/type, string markings  }
